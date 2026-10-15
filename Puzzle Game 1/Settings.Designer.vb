@@ -22,10 +22,9 @@ Partial Class Settings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settings))
         Back = New Button()
-        PictureBox1 = New PictureBox()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel1 = New TableLayoutPanel()
+        TableLayoutPanel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Back
@@ -34,39 +33,48 @@ Partial Class Settings
         Back.BackgroundImage = My.Resources.Resources.Back_True
         Back.BackgroundImageLayout = ImageLayout.Stretch
         Back.Cursor = Cursors.Hand
-        Back.Location = New Point(691, 677)
+        Back.Dock = DockStyle.Fill
+        Back.Location = New Point(325, 319)
         Back.Margin = New Padding(0)
         Back.Name = "Back"
-        Back.Size = New Size(252, 90)
+        Back.Size = New Size(132, 43)
         Back.TabIndex = 0
         Back.UseVisualStyleBackColor = True
         ' 
-        ' PictureBox1
+        ' TableLayoutPanel1
         ' 
-        PictureBox1.Dock = DockStyle.Fill
-        PictureBox1.Image = My.Resources.Resources.Updated_Controls1
-        PictureBox1.Location = New Point(0, 0)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1584, 861)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox1.TabIndex = 1
-        PictureBox1.TabStop = False
+        TableLayoutPanel1.BackColor = Color.Transparent
+        TableLayoutPanel1.ColumnCount = 3
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 41.4540825F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 16.9642849F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 41.5816345F))
+        TableLayoutPanel1.Controls.Add(Back, 1, 1)
+        TableLayoutPanel1.Dock = DockStyle.Fill
+        TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Name = "TableLayoutPanel1"
+        TableLayoutPanel1.RowCount = 3
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 77.61557F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.4622869F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 11.6788321F))
+        TableLayoutPanel1.Size = New Size(784, 411)
+        TableLayoutPanel1.TabIndex = 1
         ' 
         ' Settings
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        ClientSize = New Size(1584, 861)
-        Controls.Add(Back)
-        Controls.Add(PictureBox1)
+        BackgroundImage = My.Resources.Resources.Updated_Controls1
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(784, 411)
+        Controls.Add(TableLayoutPanel1)
+        DoubleBuffered = True
         Name = "Settings"
         Text = "Settings"
         WindowState = FormWindowState.Maximized
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel1.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents Back As Button
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
 End Class

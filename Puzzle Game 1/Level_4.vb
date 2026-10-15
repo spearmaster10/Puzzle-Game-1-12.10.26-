@@ -48,7 +48,7 @@
     'Checks the movement of the player and interacts with objects based on their colour
     Private Sub Move_Checks(Column_Change, Row_Change, Position)
         form1.Movement += 1
-        Dim New_Position As TableLayoutPanelCellPosition = New TableLayoutPanelCellPosition(Position.Column + Column_Change, Position.Row + Row_Change)
+        Dim New_Position As New TableLayoutPanelCellPosition(Position.Column + Column_Change, Position.Row + Row_Change)
         Dim Name As Control = Grid_1.GetControlFromPosition(New_Position.Column, New_Position.Row)
         Dim colour As Color = If(Name IsNot Nothing, Name.BackColor, Color.Empty)
         If Name Is Nothing Then
@@ -56,7 +56,7 @@
             Undo_Lists_Add(Column_Change, Row_Change, "Move")
         Else
             If Not Name.BackColor = Color.Red Then
-                Dim Next_Position As TableLayoutPanelCellPosition = New TableLayoutPanelCellPosition(New_Position.Column + Column_Change, New_Position.Row + Row_Change)
+                Dim Next_Position As New TableLayoutPanelCellPosition(New_Position.Column + Column_Change, New_Position.Row + Row_Change)
                 Dim Next_Name As Control = Grid_1.GetControlFromPosition(Next_Position.Column, Next_Position.Row)
                 Select Case colour
                 'Crates are pushed if the player moves into them and the space behind them is empty
@@ -148,7 +148,7 @@ No.Restarts = {form1.Restarts}")
         form1.Time += 0.10834
     End Sub
 
-    '
+    'Subroutine that runs to undo an action that was last performed by the player
     Private Sub Undo(Position)
         Dim Action As String = Movements(Movements.Count - 1)
         Movements.RemoveAt(Movements.Count - 1)
@@ -156,20 +156,20 @@ No.Restarts = {form1.Restarts}")
         UpDown.RemoveAt(UpDown.Count - 1)
         Dim Column_Reverse As Integer = LeftRight(LeftRight.Count - 1) * -1
         LeftRight.RemoveAt(LeftRight.Count - 1)
-        Dim New_Position As TableLayoutPanelCellPosition = New TableLayoutPanelCellPosition(Position.Column + Column_Reverse * -1, Position.Row + Row_Reverse * -1)
+        Dim New_Position As New TableLayoutPanelCellPosition(Position.Column + Column_Reverse * -1, Position.Row + Row_Reverse * -1)
         Select Case Action
-                '
+                'Sets the crate and player back to their previous position
             Case "Crate" 'Crate
                 Grid_1.SetCellPosition(Player, New TableLayoutPanelCellPosition(Position.Column + Column_Reverse, Position.Row + Row_Reverse))
                 Block_Move(New_Position, Position, 0, 0)
-                '
+                'Sets the player back to their previous position
             Case "Move"
                 Grid_1.SetCellPosition(Player, New TableLayoutPanelCellPosition(Position.Column + Column_Reverse, Position.Row + Row_Reverse))
                 '
             Case "Loc/Key" 'Lock/Key
                 '
             Case "Ice" 'Ice
-                '
+                'Set the playe back to their previous position and restarts the slide
             Case "Slide" 'Slide
                 Grid_1.GetControlFromPosition(Position.Column + Column_Reverse, Position.Row + Row_Reverse).BackColor = Color.FromArgb(192, 192, 0)
                 Grid_1.SetCellPosition(Player, New TableLayoutPanelCellPosition(Position.Column + Column_Reverse * 2, Position.Row + Row_Reverse * 2))
@@ -179,7 +179,7 @@ No.Restarts = {form1.Restarts}")
             Case "Drills" 'Drills
 
         End Select
-        '
+        'Changes the player's 
         Select Case Row_Reverse
             Case 1
                 Player.Image = Image.FromFile($"{form1.Current_Directory}Resources\Snail_Up.png")
@@ -194,14 +194,14 @@ No.Restarts = {form1.Restarts}")
         End Select
     End Sub
 
-    '
+    'Adds the Type of movement and movement change to the Undo lists
     Sub Undo_Lists_Add(Column_Change, Row_Change, BLock_Type)
         Movements.Add(BLock_Type)
         UpDown.Add(Row_Change)
         LeftRight.Add(Column_Change)
     End Sub
 
-    '
+    'Moves a block from one position to another
     Sub Block_Move(From, From_Add, Column_Change, Row_Change)
         Grid_1.SetCellPosition(Grid_1.GetControlFromPosition(From.Column, From.Row), New TableLayoutPanelCellPosition(From_Add.Column + Column_Change, From_Add.Row + Row_Change))
     End Sub

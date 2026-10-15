@@ -29,18 +29,25 @@ Partial Class Form4
         ExitBtn = New Button()
         PictureBox1 = New PictureBox()
         Timer1 = New Timer(components)
-        PictureBox2 = New PictureBox()
+        TableLayoutPanel1 = New TableLayoutPanel()
+        TableLayoutPanel2 = New TableLayoutPanel()
+        TableLayoutPanel3 = New TableLayoutPanel()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel1.SuspendLayout()
+        TableLayoutPanel2.SuspendLayout()
+        TableLayoutPanel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' PlayBtn
         ' 
+        PlayBtn.BackgroundImage = CType(resources.GetObject("PlayBtn.BackgroundImage"), Image)
+        PlayBtn.BackgroundImageLayout = ImageLayout.Stretch
         PlayBtn.Cursor = Cursors.Hand
-        PlayBtn.Image = CType(resources.GetObject("PlayBtn.Image"), Image)
-        PlayBtn.Location = New Point(667, 159)
+        PlayBtn.Dock = DockStyle.Fill
+        PlayBtn.Location = New Point(87, 0)
+        PlayBtn.Margin = New Padding(0)
         PlayBtn.Name = "PlayBtn"
-        PlayBtn.Size = New Size(266, 73)
+        PlayBtn.Size = New Size(122, 43)
         PlayBtn.TabIndex = 1
         PlayBtn.UseVisualStyleBackColor = True
         ' 
@@ -49,28 +56,36 @@ Partial Class Form4
         ControlsBtn.BackgroundImage = My.Resources.Resources.True_Controls_Name
         ControlsBtn.BackgroundImageLayout = ImageLayout.Stretch
         ControlsBtn.Cursor = Cursors.Hand
-        ControlsBtn.Location = New Point(534, 258)
+        ControlsBtn.Dock = DockStyle.Fill
+        ControlsBtn.Location = New Point(239, 200)
+        ControlsBtn.Margin = New Padding(0)
         ControlsBtn.Name = "ControlsBtn"
-        ControlsBtn.Size = New Size(532, 77)
+        ControlsBtn.Size = New Size(302, 46)
         ControlsBtn.TabIndex = 2
         ControlsBtn.UseVisualStyleBackColor = True
         ' 
         ' ExitBtn
         ' 
+        ExitBtn.BackgroundImage = CType(resources.GetObject("ExitBtn.BackgroundImage"), Image)
+        ExitBtn.BackgroundImageLayout = ImageLayout.Stretch
         ExitBtn.Cursor = Cursors.Hand
-        ExitBtn.Image = CType(resources.GetObject("ExitBtn.Image"), Image)
-        ExitBtn.Location = New Point(667, 359)
+        ExitBtn.Dock = DockStyle.Fill
+        ExitBtn.Location = New Point(93, 0)
+        ExitBtn.Margin = New Padding(0)
         ExitBtn.Name = "ExitBtn"
-        ExitBtn.Size = New Size(247, 71)
+        ExitBtn.Size = New Size(113, 44)
         ExitBtn.TabIndex = 3
         ExitBtn.UseVisualStyleBackColor = True
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.Dock = DockStyle.Fill
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(470, 64)
+        PictureBox1.Location = New Point(239, 32)
+        PictureBox1.Margin = New Padding(0)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(660, 77)
+        PictureBox1.Size = New Size(302, 50)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False
         ' 
@@ -79,34 +94,85 @@ Partial Class Form4
         Timer1.Enabled = True
         Timer1.Interval = 20
         ' 
-        ' PictureBox2
+        ' TableLayoutPanel1
         ' 
-        PictureBox2.Dock = DockStyle.Fill
-        PictureBox2.Image = My.Resources.Resources.Full_Bachground
-        PictureBox2.Location = New Point(0, 0)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(1584, 861)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 5
-        PictureBox2.TabStop = False
+        TableLayoutPanel1.BackColor = Color.Transparent
+        TableLayoutPanel1.ColumnCount = 3
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30.4846935F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 38.52041F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30.9948978F))
+        TableLayoutPanel1.Controls.Add(PictureBox1, 1, 1)
+        TableLayoutPanel1.Controls.Add(ControlsBtn, 1, 5)
+        TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 1, 3)
+        TableLayoutPanel1.Controls.Add(TableLayoutPanel3, 1, 7)
+        TableLayoutPanel1.Dock = DockStyle.Fill
+        TableLayoutPanel1.Location = New Point(0, 0)
+        TableLayoutPanel1.Margin = New Padding(0)
+        TableLayoutPanel1.Name = "TableLayoutPanel1"
+        TableLayoutPanel1.RowCount = 9
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 8.029197F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.4087591F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 13.8686132F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.705596F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 4.86618F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 11.435523F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 4.622871F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 10.948905F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 24.8175182F))
+        TableLayoutPanel1.Size = New Size(784, 411)
+        TableLayoutPanel1.TabIndex = 5
+        ' 
+        ' TableLayoutPanel2
+        ' 
+        TableLayoutPanel2.ColumnCount = 3
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 29.1187744F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 40.6130257F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 30.2682F))
+        TableLayoutPanel2.Controls.Add(PlayBtn, 1, 0)
+        TableLayoutPanel2.Dock = DockStyle.Fill
+        TableLayoutPanel2.Location = New Point(239, 138)
+        TableLayoutPanel2.Margin = New Padding(0)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 1
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel2.Size = New Size(302, 43)
+        TableLayoutPanel2.TabIndex = 5
+        ' 
+        ' TableLayoutPanel3
+        ' 
+        TableLayoutPanel3.ColumnCount = 3
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.034483F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 37.5478935F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 31.4176254F))
+        TableLayoutPanel3.Controls.Add(ExitBtn, 1, 0)
+        TableLayoutPanel3.Dock = DockStyle.Fill
+        TableLayoutPanel3.Location = New Point(239, 264)
+        TableLayoutPanel3.Margin = New Padding(0)
+        TableLayoutPanel3.Name = "TableLayoutPanel3"
+        TableLayoutPanel3.RowCount = 1
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel3.Size = New Size(302, 44)
+        TableLayoutPanel3.TabIndex = 6
         ' 
         ' Form4
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.LightGray
-        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        ClientSize = New Size(1584, 861)
-        Controls.Add(PictureBox1)
-        Controls.Add(ExitBtn)
-        Controls.Add(ControlsBtn)
-        Controls.Add(PlayBtn)
-        Controls.Add(PictureBox2)
+        BackgroundImage = My.Resources.Resources.Full_Bachground
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(784, 411)
+        Controls.Add(TableLayoutPanel1)
+        DoubleBuffered = True
         Name = "Form4"
         Text = "Form4"
         WindowState = FormWindowState.Maximized
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel1.ResumeLayout(False)
+        TableLayoutPanel2.ResumeLayout(False)
+        TableLayoutPanel3.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
     Friend WithEvents PlayBtn As Button
@@ -114,5 +180,7 @@ Partial Class Form4
     Friend WithEvents ExitBtn As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
 End Class

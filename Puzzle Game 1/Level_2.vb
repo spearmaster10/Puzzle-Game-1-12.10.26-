@@ -109,17 +109,9 @@ No.Restarts = {form1.Restarts}")
             Case "Move"
                 Grid_1.SetCellPosition(Player, New TableLayoutPanelCellPosition(Position.Column + Column_Reverse, Position.Row + Row_Reverse))
                 '
-            Case "Loc/Key" 'Lock/Key
-                '
-            Case "Ice" 'Ice
-                '
             Case "Slide" 'Slide
                 Grid_1.GetControlFromPosition(Position.Column + Column_Reverse, Position.Row + Row_Reverse).BackColor = Color.FromArgb(192, 192, 0)
                 Grid_1.SetCellPosition(Player, New TableLayoutPanelCellPosition(Position.Column + Column_Reverse * 2, Position.Row + Row_Reverse * 2))
-                '
-            Case Action = "Group Tiles" 'Group Tiles
-                '
-            Case "Drills" 'Drills
 
         End Select
         Select Case Row_Reverse

@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PlayBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PlayBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQMAAABBCAYAAADVNsEYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAABXZJREFUeF7t1LGxLUUQg+EXGgYJ4JAAYZAphU8YYN/fUavvruhTT8bnbNVMSztV
+        wAAADsABataJCQAABXZJREFUeF7t1LGxLUUQg+EXGgYJ4JAAYZAphU8YYN/fUavvruhTT8bnbNVMSztV
         /eOvv//5t6rqBz9U1c/pyzL47fc/z/nl1z++YIEncKaSyHQR/8MbEv+WM5VEpg3mVFSPLoNF70Smi/gf
         3pD4t5ypJDJtMKeienQZLHonMl3E//CGxL/lTCWRaYM5FdWjy2DRO5HpIv6HNyT+LWcqiUwbzKmoHl0G
         i96JTBfxP7wh8W85U0lk2mBORfXoMlj0TmS6iP/hDYl/y5lKItMGcyqqR5fBonci00X8D29I/FvOVBKZ
@@ -147,10 +147,10 @@
         0KHLYNH7Kvc9eF5x79/gzIlELhczKhc6fFkGVfXz+g+HVROzZQJg5AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="ExitBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ExitBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPcAAABFCAYAAACWjnAtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAABWtJREFUeF7t072tXUcMRWGV5sANKFEDKsOdGs5VhpRM4vWEM3vzmT8+YPAlF5hD
+        wAAADsABataJCQAABWtJREFUeF7t072tXUcMRWGV5sANKFEDKsOdGs5VhpRM4vWEM3vzmT8+YPAlF5hD
         rgvwy9///Pi51nqfL/xhrfUOe9xrvdQe91ov9eG4v3776xX++PP7v7CT+P7G/X4EZyrcvfh+ArdhakeF
         p/9qjzvY7X4/gjMV7l58P4HbMLWjwtN/tccd7Ha/H8GZCncvvp/AbZjaUeHpv9rjDna734/gTIW7F99P
         4DZM7ajw9F/tcQe73e9HcKbC3YvvJ3AbpnZUePqv9riD3e73IzhT4e7F9xO4DVM7Kjz9V3vcwW73+xGc
@@ -249,11 +249,4 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>27</value>
   </metadata>
-  <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEQAAAAdCAYAAAATksqNAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAFNJREFUWEft0KENACAAwDD+P5HgOQMkSV9gomZyY6598gzD7xqChqAhaAgagoag
-        IWgIGoKGoCFoCBqChqAhaAgagoagIWgIGoKGoCFoCBqChqAhuIEuz0ZcfmJ3AAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>
